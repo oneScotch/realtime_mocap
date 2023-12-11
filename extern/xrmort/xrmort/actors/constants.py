@@ -1,0 +1,36 @@
+FINGERS = [
+    "index_A_L",
+    "index_A_R",
+    "index_B_L",
+    "index_B_R",
+    "index_C_L",
+    "index_C_R",
+
+    "middle_A_L",
+    "middle_A_R",
+    "middle_B_L",
+    "middle_B_R",
+    "middle_C_L",
+    "middle_C_R",
+
+    "pinky_A_L",
+    "pinky_A_R",
+    "pinky_B_L",
+    "pinky_B_R",
+    "pinky_C_L",
+    "pinky_C_R",
+
+    "ring_A_L",
+    "ring_A_R",
+    "ring_B_L",
+    "ring_B_R",
+    "ring_C_L",
+    "ring_C_R",
+
+    "thumb_A_L",
+    "thumb_A_R",
+    "thumb_B_L",
+    "thumb_B_R",
+    "thumb_C_L",
+    "thumb_C_R",
+]

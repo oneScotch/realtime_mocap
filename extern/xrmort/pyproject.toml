@@ -1,0 +1,81 @@
+# NOTE: you have to use single-quoted strings in TOML for regular expressions.
+# It's the equivalent of r-strings in Python.  Multiline strings are treated as
+# verbose regular expressions by Black.  Use [ ] to denote a significant space
+# character.
+
+[tool.black]
+line-length = 80
+target-version = ['py37', 'py38', 'py39']
+include = '\.pyi?$'
+skip-string-normalization = true
+
+# We use preview style for formatting Black itself. If you
+# want stable formatting across releases, you should keep
+# this off.
+preview = true
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+# ruff configurations
+# > https://github.com/charliermarsh/ruff#configuration
+line-length = 80
+
+select = [
+    "F",    # Pyflakes
+    "E",    # Pycodestyle
+    "W",
+    "N",    # pep8-naming
+    "B",    # flake8-bugbear
+    "I001", # isort
+    "T100", # flake8-debugger
+]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+
+    ".history",
+]
+
+# Always autofix, but never try to fix `F401` (unused imports).
+fix = true
+unfixable = ["F401"]
+
+# Assume the minimum version is Python 3.7
+target-version = 'py37'
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.per-file-ignores]
+# Ignore `E402` (import violations) and `F401` (imported but unused)
+#  in all `__init__.py` files
+"__init__.py" = ["E402", "F401"]
+"tests/**/*.py" = ["E402"]
+"xrmort/io/*.py" = ["N802"]
+
+[tool.ruff.isort]
+known-first-party = []
+known-third-party = []
+
+[tool.ruff.pep8-naming]
+# Allow Pydantic's `@validator` decorator to trigger class method treatment.
+classmethod-decorators = ["classmethod", "pydantic.validator"]

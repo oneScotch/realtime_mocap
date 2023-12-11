@@ -1,0 +1,16 @@
+.gitignore
+.gitmodules
+requirements.txt
+setup.py
+setup.sh
+smplx_optimization/__init__.py
+smplx_optimization.egg-info/PKG-INFO
+smplx_optimization.egg-info/SOURCES.txt
+smplx_optimization.egg-info/dependency_links.txt
+smplx_optimization.egg-info/top_level.txt
+smplx_optimization/pykinect/__init__.py
+smplx_optimization/pykinect/index_mapping.py
+smplx_optimization/pykinect/mymath.py
+smplx_optimization/pykinect/patched_smplx_loader.py
+smplx_optimization/pykinect/pose_init.py
+smplx_optimization/pykinect/smplx_model.py
