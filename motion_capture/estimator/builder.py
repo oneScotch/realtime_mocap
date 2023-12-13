@@ -6,6 +6,7 @@ from .body_frank_estimator.estimator import BodyFrankEstimator
 from .body_frank_hands_frank_intag_estimator.estimator import (
     BodyFrankHandsFrankIntagEstimator,
 )
+from .body_mmdet_estimator.hands_mmdet_estimator import BodyMmdetEstimator
 from .body_rgbd_estimator.body_rgbd_pytorch_estimator import (
     BodyRgbdPytorchEstimator,
 )
@@ -57,7 +58,7 @@ ESTIMATOR.register_module(name='BodyFrankEstimator', module=BodyFrankEstimator)
 ESTIMATOR.register_module(
     name='BodyFrankHandsFrankIntagEstimator',
     module=BodyFrankHandsFrankIntagEstimator)
-
+ESTIMATOR.register_module(name='BodyMmdetEstimator', module=BodyMmdetEstimator)
 
 def build_estimator(cfg) -> BaseEstimator:
     """Build estimator."""
